@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usama Ahmed — Designer Wear Growth Partner | Paid Media for Luxury Pret &amp; Bridal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-alt:#F8F8FC;
+    --ink:#0F1222;
+    --body:#54596B;
+    --faint:#9CA0B3;
+    --line:#E8E8F1;
+    --accent:#6C5CE7;
+    --accent-dark:#564BC7;
+    --accent-soft:#EEF0FE;
+    --cyan:#38BDF8;
+    --green:#10B981;
+    --radius:14px;
+    --radius-sm:9px;
+    --shadow:0 1px 2px rgba(15,18,34,0.04), 0 12px 28px -10px rgba(15,18,34,0.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Inter',sans-serif;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+  }
+  em{font-style:normal; color:var(--accent);}
+  a{color:inherit; text-decoration:none;}
+  .mono{font-family:'Inter',sans-serif;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media (max-width:860px){ .wrap{padding:0 20px;} }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--accent-soft);
+    color:var(--accent-dark);
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:8px 16px;
+    border-radius:999px;
+  }
+  .eyebrow.dot::before{content:''; width:7px; height:7px; border-radius:50%; background:var(--green); display:inline-block;}
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    max-width:1180px;margin:0 auto;padding:18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  @media (max-width:860px){ nav{padding:16px 20px;} }
+  .logo{ font-size:19px; font-weight:800; color:var(--ink); }
+  .logo span{color:var(--accent);}
+  .navlinks{display:flex; gap:32px; font-size:14.5px; color:var(--body); font-weight:500;}
+  .navlinks a:hover{color:var(--ink);}
+  .navcta{
+    font-size:14px;
+    font-weight:600;
+    background:var(--accent);
+    color:#fff;
+    padding:11px 22px;
+    border-radius:999px;
+    white-space:nowrap;
+    box-shadow:var(--shadow);
+    transition:background 0.2s, transform 0.2s;
+  }
+  .navcta:hover{background:var(--accent-dark); transform:translateY(-1px);}
+  @media (max-width:860px){ .navlinks{display:none;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:110px 0 90px;
+    position:relative;
+    background:radial-gradient(700px 420px at 82% 10%, rgba(108,92,231,0.10), transparent 70%);
+  }
+  @media (max-width:860px){ .hero{padding:64px 0 56px;} }
+  .hero h1{
+    font-size:clamp(36px,5.6vw,64px);
+    line-height:1.08;
+    max-width:900px;
+    margin:26px 0 26px;
+  }
+  .hero h1 u{text-decoration:none; border-bottom:5px solid var(--cyan); padding-bottom:2px;}
+  .hero p.sub{
+    max-width:560px;
+    color:var(--body);
+    font-size:17px;
+    margin-bottom:38px;
+  }
+  .hero-ctas{display:flex; gap:20px; flex-wrap:wrap; align-items:center;}
+  .btn-primary{
+    background:var(--accent);
+    color:#fff;
+    padding:15px 28px;
+    font-size:14.5px;
+    font-weight:700;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    box-shadow:var(--shadow);
+    transition:background 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover{background:var(--accent-dark); transform:translateY(-1px);}
+  .btn-ghost{
+    color:var(--body);
+    font-size:14.5px;
+    font-weight:600;
+    border-bottom:2px solid var(--line);
+    padding-bottom:3px;
+  }
+  .btn-ghost:hover{color:var(--ink); border-color:var(--accent);}
+
+  .divider{ height:1px; background:var(--line); margin:0 32px; }
+  .divider.wide{ margin:0 32px; }
+
+  /* ---------- Stats ---------- */
+  .stats{ padding:52px 0; background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stats .wrap{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+  @media (max-width:860px){ .stats .wrap{grid-template-columns:1fr 1fr; gap:28px 0;} }
+  .stat{border-left:1px solid var(--line); padding:4px 26px;}
+  .stat:first-child{border-left:none; padding-left:0;}
+  @media (max-width:860px){ .stat:nth-child(odd){border-left:none; padding-left:0;} }
+  .stat .num{font-size:34px; font-weight:800; color:var(--accent);}
+  .stat .label{font-size:13px; color:var(--faint); margin-top:6px; font-weight:500;}
+
+  /* markets strip */
+  .markets{ padding:22px 0; }
+  .markets .wrap{
+    display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center;
+    font-size:13.5px; color:var(--body); font-weight:500;
+  }
+  .markets .tag{color:var(--accent); font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em;}
+
+  /* ---------- Section shell ---------- */
+  section.block{ padding:96px 0; }
+  @media (max-width:860px){ section.block{padding:60px 0;} }
+  .section-head{max-width:680px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(28px,3.6vw,40px); margin-top:16px; line-height:1.15;}
+  .section-head p{color:var(--body); margin-top:16px; font-size:16px; max-width:540px;}
+
+  /* ---------- Lookbook (case studies) ---------- */
+  .look{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--bg);
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:1fr 300px;
+    gap:40px;
+  }
+  @media (max-width:860px){ .look{grid-template-columns:1fr; padding:26px;} }
+  .look-tag{ font-size:12.5px; font-weight:700; color:var(--accent); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:10px; }
+  .look h3{font-size:25px; margin-bottom:14px; max-width:620px; font-weight:800;}
+  .look .meta{
+    display:flex; gap:16px; flex-wrap:wrap; font-size:12px; color:var(--faint); font-weight:600;
+    margin-bottom:20px;
+  }
+  .look p.desc{color:var(--body); font-size:15px; max-width:600px; margin-bottom:20px;}
+  .look .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .look .chips span{
+    font-size:12px; border:1px solid var(--line); border-radius:999px; padding:6px 12px; color:var(--body); background:var(--bg-alt);
+  }
+  .look-numbers{
+    display:grid; grid-template-columns:1fr 1fr; gap:20px; align-content:start;
+    border-left:1px solid var(--line); padding-left:36px;
+  }
+  @media (max-width:860px){ .look-numbers{border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:20px;} }
+  .look-numbers .n{font-size:28px; font-weight:800; color:var(--accent);}
+  .look-numbers .l{font-size:11.5px; color:var(--faint); margin-top:2px; font-weight:500;}
+
+  /* also worked with */
+  .also{ margin-top:8px; border-top:1px dashed var(--line); padding-top:36px; }
+  .also-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:22px;}
+  @media (max-width:860px){ .also-grid{grid-template-columns:1fr;} }
+  .also-card{border:1px solid var(--line); border-radius:var(--radius-sm); padding:22px; background:var(--bg-alt);}
+  .also-card .tag{font-size:11.5px; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:0.04em;}
+  .also-card h4{font-size:17px; margin:10px 0 8px; font-weight:700;}
+  .also-card p{font-size:13.5px; color:var(--body);}
+
+  /* ---------- Brand Wall (text-based) ---------- */
+  .brand-wall{ padding:56px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg-alt); overflow:hidden; }
+  .brand-wall .label{ font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.08em; text-align:center; margin-bottom:34px; }
+  .brand-marquee{
+    width:100%; overflow:hidden; position:relative;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+  .brand-track{
+    display:flex; align-items:center; gap:60px; width:max-content;
+    animation:brandScroll 32s linear infinite;
+  }
+  .brand-wall:hover .brand-track{ animation-play-state:paused; }
+  .brand-track span, .brand-track a{ font-size:16px; font-weight:600; color:var(--body); letter-spacing:0.01em; white-space:nowrap; transition:color 0.2s; text-decoration:none; cursor:pointer; }
+  .brand-track span:hover, .brand-track a:hover{ color:var(--accent); }
+  @keyframes brandScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  @media (prefers-reduced-motion: reduce){ .brand-track{animation:none;} }
+  .results-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  @media (max-width:860px){ .results-grid{grid-template-columns:repeat(2,1fr);} }
+  .result-card{background:var(--bg); border:1px solid var(--line); border-radius:var(--radius-sm); padding:26px 22px; box-shadow:var(--shadow);}
+  .result-card .src{font-size:11px; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:10px;}
+  .result-card .n{font-size:28px; font-weight:800; color:var(--ink);}
+  .result-card .l{font-size:12.5px; color:var(--faint); margin-top:6px; line-height:1.4; font-weight:500;}
+
+  /* ---------- Process ---------- */
+  .process-list{border-top:1px solid var(--line);}
+  .p-row{ display:grid; grid-template-columns:130px 1fr; padding:32px 0; border-bottom:1px solid var(--line); gap:24px; }
+  .p-row .p-num{font-size:14px; color:var(--faint); font-weight:600;}
+  .p-row .p-num .stage{display:block; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:6px; font-weight:700;}
+  .p-row h3{font-size:20px; margin-bottom:8px; font-weight:700;}
+  .p-row p{color:var(--body); font-size:15px; max-width:560px;}
+  @media (max-width:600px){ .p-row{grid-template-columns:1fr; gap:6px;} }
+
+  /* ---------- Fabric / niche depth ---------- */
+  .swatches{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:860px){ .swatches{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .swatches{grid-template-columns:1fr;} }
+  .swatch{ border:1px solid var(--line); border-radius:var(--radius-sm); padding:26px 22px; position:relative; overflow:hidden; background:var(--bg); }
+  .swatch::before{ content:''; position:absolute; top:0; left:0; width:100%; height:4px; }
+  .swatch.c1::before{background:var(--accent);}
+  .swatch.c2::before{background:var(--cyan);}
+  .swatch.c3::before{background:var(--green);}
+  .swatch.c4::before{background:#F59E0B;}
+  .swatch.c5::before{background:#EC4899;}
+  .swatch.c6::before{background:var(--accent);}
+  .swatch h4{font-size:16px; margin-bottom:10px; font-weight:700;}
+  .swatch p{font-size:14px; color:var(--body);}
+
+  /* ---------- Platforms ---------- */
+  .plat-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden;}
+  @media (max-width:760px){ .plat-grid{grid-template-columns:repeat(2,1fr);} }
+  .plat{background:var(--bg); padding:26px 22px;}
+  .plat .name{font-size:17px; font-weight:700;}
+  .plat .tag2{font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em; margin-top:6px; display:block; font-weight:700;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{border-top:1px solid var(--line); max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:24px 0; font-size:17px; font-weight:700;
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:'+'; color:var(--accent); font-size:20px; flex-shrink:0; font-weight:700;
+    transition:transform 0.2s;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{color:var(--body); font-size:15px; max-width:640px; padding:0 0 24px;}
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:860px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-card{
+    border:1px solid var(--line); border-radius:var(--radius); background:var(--bg); padding:36px 30px;
+    display:flex; flex-direction:column; position:relative; box-shadow:var(--shadow);
+  }
+  .price-card.featured{border-color:var(--accent); border-width:2px;}
+  .price-card .featured-tag{
+    position:absolute; top:-13px; left:30px; background:var(--accent); color:#fff;
+    font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    padding:5px 14px; border-radius:999px;
+  }
+  .price-card .tier-name{font-size:13px; color:var(--accent); letter-spacing:0.04em; text-transform:uppercase; font-weight:700;}
+  .price-card .tier-amount{font-size:38px; color:var(--ink); margin:14px 0 2px; font-weight:800;}
+  .price-card .tier-amount span{font-size:13px; color:var(--faint); font-weight:500;}
+  .price-card ul{list-style:none; margin-top:26px; flex:1;}
+  .price-card li{padding:10px 0; border-bottom:1px dashed var(--line); font-size:13.5px; color:var(--body);}
+  .price-card li:last-child{border-bottom:none;}
+  .price-card li::before{content:'—'; color:var(--accent); margin-right:8px;}
+  .price-card .btn-primary{width:100%; justify-content:center; margin-top:28px; box-sizing:border-box;}
+
+  /* ---------- Screenshot Proof Wall ---------- */
+  .shot-tabs{display:flex; gap:10px; margin-bottom:28px;}
+  .shot-tab{
+    font-size:13px; font-weight:700; padding:9px 18px; border-radius:999px; border:1px solid var(--line); color:var(--body);
+  }
+  .shot-tab.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .shot-tab[data-platform="meta"].active{background:#0082FB; border-color:#0082FB;}
+  .shot-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
+  @media (max-width:760px){ .shot-grid{grid-template-columns:1fr;} }
+  .shot-card{
+    border:1.5px solid var(--line); border-radius:16px; overflow:hidden; background:var(--bg);
+    box-shadow:var(--shadow); transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .shot-card:hover{ transform:translateY(-5px); border-color:var(--accent); box-shadow:0 16px 36px -12px rgba(15,18,34,0.16); }
+  .shot-card img{ width:100%; height:320px; object-fit:contain; background:#fff; padding:14px; display:block; }
+  .shot-card .cap{ padding:14px 18px; font-size:12.5px; color:var(--faint); font-weight:600; border-top:1px solid var(--line); text-align:center; }
+
+  /* ---------- CTA ---------- */
+  .cta-block{
+    padding:100px 0 110px;
+    text-align:left;
+    border-top:1px solid var(--line);
+    background:radial-gradient(700px 380px at 12% 20%, rgba(108,92,231,0.08), transparent 70%);
+  }
+  @media (max-width:860px){ .cta-block{padding:64px 0;} }
+  .cta-block h2{font-size:clamp(30px,4.6vw,50px); max-width:760px; line-height:1.15;}
+  .cta-note{margin-top:24px; display:flex; gap:24px; flex-wrap:wrap; font-size:13px; color:var(--faint); font-weight:500;}
+
+  footer{
+    padding:32px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    font-size:13.5px; color:var(--faint);
+    max-width:1180px; margin:0 auto;
+  }
+  footer a:hover{color:var(--accent);}
+  @media (max-width:860px){ footer{padding:26px 20px; flex-direction:column; align-items:flex-start;} }
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity 0.7s ease, transform 0.7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">USAMA <span>AHMED</span></div>
+    <div class="navlinks">
+      <a href="#brands">Brands</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#process">Process</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="navcta" href="#contact">Book a Fitting Call →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow dot reveal">Paid Media, Exclusively for Designer Wear · PKR 60K–150K Tier</div>
+    <h1 class="reveal">I don't sell dresses —<br>I build the <em>demand</em> your<br><u>collection deserves</u></h1>
+    <p class="sub reveal">Four years running performance marketing only for luxury pret, bridal, and occasion-wear brands. I know the difference between a lookbook that gets liked and one that gets bought.</p>
+    <div class="hero-ctas reveal">
+      <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
+      <a class="btn-ghost" href="#lookbook">See the Lookbook ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="proof" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Straight From the Dashboard</div>
+      <h2>No mockups. Just <em>the accounts</em></h2>
+      <p>Live Google Ads and Meta Ads dashboards, pulled directly from managed accounts — conversion value, ROAS, and spend, unedited.</p>
+    </div>
+
+    <div class="shot-tabs reveal">
+      <div class="shot-tab active" data-platform="google" onclick="switchShotTab('google')">Google Ads</div>
+      <div class="shot-tab" data-platform="meta" onclick="switchShotTab('meta')">Meta Ads</div>
+    </div>
+
+    <div class="shot-panel" data-platform="google">
+      <div style="margin-bottom:14px; font-size:13px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em;">Google Ads Performance</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="assets/result-google-1.png" alt="Google Ads results — conversion value and cost"><div class="cap">$18.9M conv. value · 11K conversions · Nov 2025</div></div>
+        <div class="shot-card"><img src="assets/result-google-2.png" alt="Google Ads results — cost per conversion"><div class="cap">$28.37 cost/conv · 1.2K conversions</div></div>
+        <div class="shot-card"><img src="assets/result-google-3.png" alt="Google Ads results — ROAS"><div class="cap">6,681% actual ROAS · 2.58K conversions · Oct 2025</div></div>
+        <div class="shot-card"><img src="assets/result-google-4.png" alt="Google Ads results — ROAS December"><div class="cap">2,154% actual ROAS · Dec 2025</div></div>
+      </div>
+    </div>
+
+    <div class="shot-panel" data-platform="meta" style="display:none;">
+      <div style="margin-bottom:14px; font-size:13px; font-weight:700; color:#0082FB; text-transform:uppercase; letter-spacing:0.04em;">Meta Ads Performance</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="assets/result-meta-1.png" alt="Meta Ads campaign results — spend and purchases"><div class="cap">$194.5K spent · 25,179 purchases across 7 campaigns</div></div>
+        <div class="shot-card"><img src="assets/result-meta-2.png" alt="Meta Ads campaign results — reach and frequency"><div class="cap">$135.4K spent · 20,359 purchases · 3M+ reach</div></div>
+        <div class="shot-card"><img src="assets/result-meta-3.png" alt="Meta Ads campaign recommendations and spend"><div class="cap">Active campaign set, cost-per-result breakdown</div></div>
+        <div class="shot-card"><img src="assets/result-meta-4.png" alt="Meta Ads campaign results across 21 campaigns"><div class="cap">Results from 21 campaigns, per-conversion cost detail</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num">$3M+</div><div class="label">Ad Spend Managed</div></div>
+    <div class="stat reveal"><div class="num">20M PKR</div><div class="label">Highest Monthly Revenue, Designer Pret</div></div>
+    <div class="stat reveal"><div class="num">6x</div><div class="label">Blended ROAS, Same Brand</div></div>
+    <div class="stat reveal"><div class="num">4+ yrs</div><div class="label">Exclusively in Fashion &amp; Designer Wear</div></div>
+  </div>
+</section>
+
+<section class="brand-wall" id="brands">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:36px;">
+      <div class="eyebrow">The Client Roster</div>
+      <h2>Brands who trusted <em>the process</em></h2>
+      <p>From luxury pret to leather goods to hospitality — a running list of the brands I've built paid media for.</p>
+    </div>
+  </div>
+  <div class="brand-marquee reveal">
+    <div class="brand-track">
+      <a href="#brands">Mövenpick</a>
+      <a href="#brands">AllSaints</a>
+      <a href="#brands">IVAR Clothing</a>
+      <a href="#brands">Petunia</a>
+      <a href="#brands">Miras</a>
+      <a href="#brands">Yolo</a>
+      <a href="#brands">Russet</a>
+      <a href="#brands">Zeenat Jahaan</a>
+      <a href="#brands">Shaad Fabrics</a>
+      <a href="#brands">Mithra &amp; Co.</a>
+      <a href="#brands">Ansa Apparel</a>
+      <a href="#brands">Henschel Hats</a>
+      <a href="#brands">Levant Leather</a>
+      <a href="#brands">Sahar Pakistan</a>
+      <!-- duplicate set for seamless loop -->
+      <a href="#brands">Mövenpick</a>
+      <a href="#brands">AllSaints</a>
+      <a href="#brands">IVAR Clothing</a>
+      <a href="#brands">Petunia</a>
+      <a href="#brands">Miras</a>
+      <a href="#brands">Yolo</a>
+      <a href="#brands">Russet</a>
+      <a href="#brands">Zeenat Jahaan</a>
+      <a href="#brands">Shaad Fabrics</a>
+      <a href="#brands">Mithra &amp; Co.</a>
+      <a href="#brands">Ansa Apparel</a>
+      <a href="#brands">Henschel Hats</a>
+      <a href="#brands">Levant Leather</a>
+      <a href="#brands">Sahar Pakistan</a>
+    </div>
+  </div>
+</section>
+
+<div class="markets">
+  <div class="wrap">
+    <span class="tag">Markets Served</span>
+    <span>Pakistan</span><span>UAE</span><span>UK</span><span>USA</span><span>Saudi Arabia</span>
+  </div>
+</div>
+
+<section class="block" id="lookbook">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Lookbook</div>
+      <h2>Real collections. Real <em>sell-through</em>.</h2>
+      <p>No stock screenshots, no borrowed case studies — every number below came off an ad account I ran, for designer wear and the categories that sit right next to it.</p>
+    </div>
+
+    <div class="look reveal">
+      <div>
+        <div class="look-tag">Look 01 — Women's Luxury Pret · Pakistan &amp; USA</div>
+        <h3>Stuck at <em>250K PKR/month</em> to <em>20M PKR/month</em> in 180 days</h3>
+        <div class="meta"><span>META ADS</span><span>GOOGLE ADS</span><span>KLAVIYO</span></div>
+        <p class="desc">This brand had no consistency in sales and ROAS was dropping month on month. I rebuilt the strategy around a proper funnel — cold audiences in the USA and Pakistan pulled in through Meta and high-intent Google traffic, then closed on email through Klaviyo instead of getting left on the table.</p>
+        <div class="chips"><span>Meta Advantage+</span><span>Google Shopping</span><span>Klaviyo Flows</span><span>UGC Creative</span><span>Full Funnel</span></div>
+      </div>
+      <div class="look-numbers">
+        <div><div class="n">6x</div><div class="l">Blended ROAS</div></div>
+        <div><div class="n">20M</div><div class="l">PKR Monthly Revenue</div></div>
+        <div><div class="n">-15%</div><div class="l">CPA Reduction</div></div>
+        <div><div class="n">180</div><div class="l">Days to Scale</div></div>
+      </div>
+    </div>
+
+    <div class="look reveal">
+      <div>
+        <div class="look-tag">Look 02 — Women's Footwear · Pakistan</div>
+        <h3>Unstable ROAS fixed — <em>4.28x average</em> across 531 campaigns</h3>
+        <div class="meta"><span>META DPA</span><span>CATALOG ADS</span><span>RETARGETING</span></div>
+        <p class="desc">Footwear rides on the same buyer as designer wear — same occasion-driven purchase, same fit anxiety. This account had inconsistent sales and high CPAs. I restructured it into a clear full-funnel setup with comfort-and-fit-led creative, separated audience tiers, and dynamic catalog retargeting to drive repeat purchase.</p>
+        <div class="chips"><span>Meta DPA</span><span>Catalog Ads</span><span>Audience Tiering</span><span>Creative Testing</span></div>
+      </div>
+      <div class="look-numbers">
+        <div><div class="n">4.28x</div><div class="l">Avg ROAS</div></div>
+        <div><div class="n">7,579</div><div class="l">Purchases</div></div>
+        <div><div class="n">14,915</div><div class="l">Checkouts</div></div>
+        <div><div class="n">531</div><div class="l">Campaigns Run</div></div>
+      </div>
+    </div>
+
+    <div class="also reveal">
+      <div class="eyebrow">Also On the Rack</div>
+      <div class="also-grid">
+        <div class="also-card">
+          <div class="tag">Occasion Wear</div>
+          <h4>Bridal &amp; Formal Ateliers</h4>
+          <p>Full-funnel Meta ad copy and retargeting sequences built around wedding-season buying windows, where the decision takes weeks, not minutes.</p>
+        </div>
+        <div class="also-card">
+          <div class="tag">Leather Goods</div>
+          <h4>Premium Accessories, UK</h4>
+          <p>Awareness and retargeting copy built on verified craft credentials — certification, material, and construction — instead of generic lifestyle claims.</p>
+        </div>
+        <div class="also-card">
+          <div class="tag">6-Month Media Plans</div>
+          <h4>Full-Funnel Roadmaps</h4>
+          <p>Phased ROAS targets across Meta, Google, and Klaviyo, built before a single rupee is spent — not figured out live on the client's budget.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="results">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Results Rack</div>
+      <h2>Every number, off a <em>live account</em></h2>
+      <p>No stock templates. This is the aggregate of four years spent exclusively in fashion, occasion wear, and the categories that sit next to it.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal"><div class="src">Look 01</div><div class="n">20M PKR</div><div class="l">Highest monthly revenue, Women's Luxury Pret</div></div>
+      <div class="result-card reveal"><div class="src">Look 01</div><div class="n">6x</div><div class="l">Blended ROAS, same account, 180 days</div></div>
+      <div class="result-card reveal"><div class="src">Look 02</div><div class="n">4.28x</div><div class="l">Average ROAS across 531 campaigns</div></div>
+      <div class="result-card reveal"><div class="src">Look 02</div><div class="n">-15%</div><div class="l">CPA reduction after full-funnel rebuild</div></div>
+      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">$3M+</div><div class="l">Ad spend actively managed</div></div>
+      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">5</div><div class="l">Markets served — PK, UAE, UK, USA, KSA</div></div>
+      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">4+ yrs</div><div class="l">Exclusively in fashion &amp; designer wear</div></div>
+      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">30+</div><div class="l">Brands across fast fashion, luxury pret &amp; bridal</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How I Work</div>
+      <h2>From <em>moodboard</em> to sold out</h2>
+      <p>A collection goes through moodboard, pattern, sample, and production before it hits the rack. Your ad account goes through the same five stages.</p>
+    </div>
+    <div class="process-list">
+      <div class="p-row reveal">
+        <div class="p-num"><span class="stage">Stage 01</span>Moodboard</div>
+        <div><h3>Market &amp; Audience Read</h3><p>Competitor ad libraries, price-tier positioning, and audience profiling before a single rupee is spent. Designer wear ads live and die on whether the offer matches who's actually looking.</p></div>
+      </div>
+      <div class="p-row reveal">
+        <div class="p-num"><span class="stage">Stage 02</span>Pattern</div>
+        <div><h3>Funnel Architecture</h3><p>The full customer journey gets cut like a pattern — TOF discovery, MOF consideration, BOF conversion — so nothing leaks between "loved it" and "bought it."</p></div>
+      </div>
+      <div class="p-row reveal">
+        <div class="p-num"><span class="stage">Stage 03</span>Sample</div>
+        <div><h3>Launch &amp; Creative Testing</h3><p>Tracking goes in first. Then small-batch creative testing — different silhouettes of the same message — before real budget touches any single ad.</p></div>
+      </div>
+      <div class="p-row reveal">
+        <div class="p-num"><span class="stage">Stage 04</span>Production</div>
+        <div><h3>Data-Driven Scaling</h3><p>Budget follows the data, not the favourite. Winning creative and audiences get the production run; everything else gets cut fast.</p></div>
+      </div>
+      <div class="p-row reveal">
+        <div class="p-num"><span class="stage">Stage 05</span>Alterations</div>
+        <div><h3>Retention &amp; Aftercare</h3><p>Klaviyo flows, retargeting sequences, and repeat-purchase nurture — the after-sales service that turns a one-time buyer into a return customer for the next drop.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="fabric">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Fabric of This Niche</div>
+      <h2>What's actually different about selling at <em>60K–150K PKR</em></h2>
+      <p>Designer wear doesn't buy like fast fashion, and it doesn't buy like mass e-commerce either. This is what I build around.</p>
+    </div>
+    <div class="swatches">
+      <div class="swatch c1 reveal">
+        <h4>Ad Fatigue Is the Real Enemy</h4>
+        <p>Every designer wear account runs the same try-on reel. I build creative variance into the testing plan from day one so the account isn't fighting its own category for attention.</p>
+      </div>
+      <div class="swatch c2 reveal">
+        <h4>Longer Consideration Windows</h4>
+        <p>A 100K PKR outfit isn't an impulse buy. Retargeting windows, frequency caps, and email nurture are set for a multi-week decision, not a same-day one.</p>
+      </div>
+      <div class="swatch c3 reveal">
+        <h4>Season Is the Media Plan</h4>
+        <p>Eid, wedding season, and formal drop calendars decide budget pacing months in advance — not the week the collection actually launches.</p>
+      </div>
+      <div class="swatch c4 reveal">
+        <h4>Catalog Built for Variants</h4>
+        <p>Size, colourway, and unstitched-vs-stitched SKUs need a catalog structure that doesn't fall apart the moment DPA tries to retarget the wrong variant.</p>
+      </div>
+      <div class="swatch c5 reveal">
+        <h4>Price-Tier Psychology</h4>
+        <p>Ad copy and offer structure change depending on whether the buyer is comparing you to ready-to-wear or to a tailor — that framing shift is most of the conversion rate.</p>
+      </div>
+      <div class="swatch c6 reveal">
+        <h4>Bridal Is Its Own Funnel</h4>
+        <p>Bridal buyers research for months before they message. WhatsApp and email nurture sequences matter as much as the ad that started the conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="platforms">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Platforms &amp; Tools</div>
+      <h2>Wherever your <em>buyer</em> actually is</h2>
+      <p>Core expertise across the platforms that carry designer wear and occasion-wear spend, with Google Ads certification and $3M+ in active monthly budgets managed.</p>
+    </div>
+    <div class="plat-grid">
+      <div class="plat reveal"><div class="name">Google Ads</div><span class="tag2">Core · Certified</span></div>
+      <div class="plat reveal"><div class="name">Meta Ads</div><span class="tag2">Core</span></div>
+      <div class="plat reveal"><div class="name">TikTok Ads</div><span class="tag2">Discovery</span></div>
+      <div class="plat reveal"><div class="name">Pinterest Ads</div><span class="tag2">Intent</span></div>
+      <div class="plat reveal"><div class="name">Snapchat Ads</div><span class="tag2">Younger Audience</span></div>
+      <div class="plat reveal"><div class="name">Klaviyo</div><span class="tag2">Retention</span></div>
+      <div class="plat reveal"><div class="name">Google Analytics</div><span class="tag2">Measurement</span></div>
+      <div class="plat reveal"><div class="name">LinkedIn Ads</div><span class="tag2">B2B / Wholesale</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Before You Book</div>
+      <h2>Questions every <em>brand owner</em> asks</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>I already have someone running my ads — why switch?</summary>
+        <p>Most media buyers split their attention across every niche that walks in. I only run designer wear and occasion wear — the fatigue patterns, the price-tier psychology, the seasonal calendar. You get someone who's already made the expensive mistakes on someone else's budget, not yours.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How fast will I actually see a difference?</summary>
+        <p>Tracking and audit fixes show up in the first 2–3 weeks. Real scale takes longer here than in fast fashion — a 100K PKR outfit has a multi-week consideration window, so I'm usually looking at 60–90 days for the full funnel to compound.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to sign a long-term contract?</summary>
+        <p>No. It's a month-to-month retainer. If the account isn't performing, you're not locked into six months of it.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you create the content too, or just manage the ads?</summary>
+        <p>Raw content editing and creative testing are built into every tier. Full production — shoots, styling — isn't, but I'll work directly with your photographer or videographer to brief what the ad account actually needs.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if my sales are inconsistent right now — is it too early to scale?</summary>
+        <p>That's exactly what the audit and research phase is for. Tracking, offer, and creative get fixed before more budget goes anywhere near the account. Scaling an unfixed leak just makes the leak bigger.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work with brands outside Pakistan?</summary>
+        <p>Yes — currently managing accounts across Pakistan, UAE, UK, USA, and Saudi Arabia. It's a remote-first setup: WhatsApp for daily updates, a monthly reporting call, and full visibility into the ad accounts at all times.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's the minimum ad budget I need to work with you?</summary>
+        <p>Enough to generate statistically meaningful testing data. For most designer wear brands that's around 150K+ PKR/month in media spend — separate from the retainer itself.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Investment</div>
+      <h2>Three ways to <em>work together</em></h2>
+      <p>Flat monthly retainers, no ad spend markup, no long-term lock-in.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="tier-name">Grow</div>
+        <div class="tier-amount">120K <span>PKR / month</span></div>
+        <ul>
+          <li>Onboarding &amp; review calls</li>
+          <li>Research</li>
+          <li>Audit</li>
+          <li>Meta ads management</li>
+          <li>Creatives</li>
+          <li>Raw content editing</li>
+          <li>Optimizations</li>
+          <li>Social management — 15 posts</li>
+          <li>Content calendar</li>
+          <li>Posting</li>
+        </ul>
+        <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="featured-tag">Most Booked</div>
+        <div class="tier-name">Scale</div>
+        <div class="tier-amount">250K <span>PKR / month</span></div>
+        <ul>
+          <li>Onboarding &amp; review calls</li>
+          <li>Research</li>
+          <li>Audit</li>
+          <li>Optimizations</li>
+          <li>Meta ads management</li>
+          <li>Google ads management</li>
+          <li>YouTube ads management</li>
+          <li>Raw content editing</li>
+          <li>Creatives</li>
+          <li>Social management — 30 posts</li>
+          <li>Content calendar</li>
+          <li>Posting</li>
+        </ul>
+        <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="tier-name">Dominate</div>
+        <div class="tier-amount">400K <span>PKR / month</span></div>
+        <ul>
+          <li>Onboarding &amp; review calls</li>
+          <li>Media plan</li>
+          <li>Research</li>
+          <li>Audit</li>
+          <li>Optimizations</li>
+          <li>Meta ads management</li>
+          <li>Google ads management</li>
+          <li>YouTube ads management</li>
+          <li>Email marketing</li>
+          <li>Raw content editing</li>
+          <li>Creatives</li>
+          <li>Social management — 30 posts + stories</li>
+          <li>Content calendar</li>
+          <li>Posting</li>
+        </ul>
+        <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-block" id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Let's Work Together</div>
+    <h2 class="reveal" style="margin-top:16px;">Ready to make your next collection <em>sell out</em> before it ships?</h2>
+    <div class="hero-ctas reveal" style="margin-top:32px;">
+      <a class="btn-primary" href="https://docs.google.com/forms/d/19QeEKN4_6_2Q4dXbBzLMbWPuuAm_JDh8GvyAXvos3Aw/">Book My Free Fitting Call →</a>
+    </div>
+    <div class="cta-note reveal">
+      <span>No commitment required</span>
+      <span>30-min call, usually within 48h</span>
+      <span>Karachi, PK · Global clients welcome</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Usama Ahmed · Designer Wear Growth Partner</div>
+  <div><a href="https://www.linkedin.com/in/usamaahmeddigitalmarketer/">LinkedIn ↗</a></div>
+</footer>
+
+<script>
+  function switchShotTab(platform){
+    document.querySelectorAll('.shot-tab').forEach(t=>t.classList.toggle('active', t.dataset.platform===platform));
+    document.querySelectorAll('.shot-panel').forEach(p=>{
+      p.style.display = p.dataset.platform===platform ? '' : 'none';
+    });
+  }
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:0.12});
+  reveals.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
