@@ -218,6 +218,9 @@
   .brand-wall:hover .brand-track{ animation-play-state:paused; }
   .brand-track span, .brand-track a{ font-size:16px; font-weight:600; color:var(--body); letter-spacing:0.01em; white-space:nowrap; transition:color 0.2s; text-decoration:none; cursor:pointer; }
   .brand-track span:hover, .brand-track a:hover{ color:var(--accent); }
+  .brand-track a.brand-logo{ display:flex; align-items:center; height:34px; }
+  .brand-track a.brand-logo img{ height:100%; width:auto; max-width:140px; object-fit:contain; filter:grayscale(1); opacity:0.75; transition:opacity 0.2s, filter 0.2s; }
+  .brand-track a.brand-logo:hover img{ filter:grayscale(0); opacity:1; }
   @keyframes brandScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
   @media (prefers-reduced-motion: reduce){ .brand-track{animation:none;} }
   .results-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
@@ -295,6 +298,17 @@
   .price-card li::before{content:'—'; color:var(--accent); margin-right:8px;}
   .price-card .btn-primary{width:100%; justify-content:center; margin-top:28px; box-sizing:border-box;}
 
+  /* ---------- Case Study Grid (compact) ---------- */
+  .case-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media (max-width:960px){ .case-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:640px){ .case-grid{grid-template-columns:1fr;} }
+  .case-card{ border:1px solid var(--line); border-radius:var(--radius); background:var(--bg); box-shadow:var(--shadow); padding:26px 24px; }
+  .case-card .case-tag{ font-size:11.5px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:10px; }
+  .case-card h4{ font-size:17px; font-weight:700; margin-bottom:16px; line-height:1.3; }
+  .case-stats{ display:grid; grid-template-columns:1fr 1fr; gap:14px; border-top:1px solid var(--line); padding-top:16px; }
+  .case-stats .n{ font-size:19px; font-weight:800; color:var(--ink); }
+  .case-stats .l{ font-size:11px; color:var(--faint); margin-top:2px; font-weight:500; }
+
   /* ---------- Screenshot Proof Wall ---------- */
   .shot-tabs{display:flex; gap:10px; margin-bottom:28px;}
   .shot-tab{
@@ -302,6 +316,7 @@
   }
   .shot-tab.active{background:var(--accent); color:#fff; border-color:var(--accent);}
   .shot-tab[data-platform="meta"].active{background:#0082FB; border-color:#0082FB;}
+  .shot-tab[data-platform="shopify"].active{background:#95BF47; border-color:#95BF47;}
   .shot-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
   @media (max-width:760px){ .shot-grid{grid-template-columns:1fr;} }
   .shot-card{
@@ -348,14 +363,13 @@
     <div class="logo">USAMA <span>AHMED</span></div>
     <div class="navlinks">
       <a href="#brands">Brands</a>
-      <a href="#lookbook">Lookbook</a>
+      <a href="#case-studies">Results</a>
       <a href="#process">Process</a>
       <a href="#platforms">Platforms</a>
-      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="navcta" href="#contact">Book a Fitting Call →</a>
+    <a class="navcta" href="#contact">Book an Audit Call →</a>
   </nav>
 </header>
 
@@ -365,8 +379,8 @@
     <h1 class="reveal">I don't sell dresses —<br>I build the <em>demand</em> your<br><u>collection deserves</u></h1>
     <p class="sub reveal">Four years running performance marketing only for luxury pret, bridal, and occasion-wear brands. I know the difference between a lookbook that gets liked and one that gets bought.</p>
     <div class="hero-ctas reveal">
-      <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
-      <a class="btn-ghost" href="#lookbook">See the Lookbook ↓</a>
+      <a class="btn-primary" href="#contact">Book an Audit Call →</a>
+      <a class="btn-ghost" href="#case-studies">See the Results ↓</a>
     </div>
   </div>
 </section>
@@ -382,6 +396,7 @@
     <div class="shot-tabs reveal">
       <div class="shot-tab active" data-platform="google" onclick="switchShotTab('google')">Google Ads</div>
       <div class="shot-tab" data-platform="meta" onclick="switchShotTab('meta')">Meta Ads</div>
+      <div class="shot-tab" data-platform="shopify" onclick="switchShotTab('shopify')">Shopify</div>
     </div>
 
     <div class="shot-panel" data-platform="google">
@@ -402,6 +417,49 @@
         <div class="shot-card"><img src="11.png" alt="Meta Ads campaign recommendations and spend"><div class="cap">Active campaign set, cost-per-result breakdown</div></div>
         <div class="shot-card"><img src="12.png" alt="Meta Ads campaign results across 21 campaigns"><div class="cap">Results from 21 campaigns, per-conversion cost detail</div></div>
       </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Retargeting &amp; Lookalike Account · PKR</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="9.jpeg" alt="Meta Ads results — December 2025, 32 campaigns"><div class="cap">Rs1,197,898 spent · 580 purchases · 5.32x avg ROAS · Dec 2025</div></div>
+        <div class="shot-card"><img src="10.jpeg" alt="Meta Ads results — November 2025, 32 campaigns"><div class="cap">Rs1,114,755 spent · 625 purchases · 5.84x avg ROAS · Nov 2025</div></div>
+        <div class="shot-card"><img src="11.jpeg" alt="Meta Ads results — October 2025, 32 campaigns"><div class="cap">Rs984,582 spent · 638 purchases · 6.02x avg ROAS · Oct 2025</div></div>
+        <div class="shot-card"><img src="12.jpeg" alt="Meta Ads results — H2 2025, 32 campaigns"><div class="cap">Rs6.04M spent · 3,357 purchases · 5.32x avg ROAS · Jul–Dec 2025</div></div>
+        <div class="shot-card"><img src="13.jpeg" alt="Meta Ads results — full year 2025, 32 campaigns"><div class="cap">Rs12.23M spent · 7,106 purchases · 5.40x avg ROAS · Full year 2025</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Modest Wear Account — Hijabs &amp; Essentials · PKR</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="14.jpeg" alt="Meta Ads results — November 2025, 214 campaigns"><div class="cap">Rs591,706 spent · 4.09x avg ROAS · Nov 2025</div></div>
+        <div class="shot-card"><img src="15.jpeg" alt="Meta Ads results — December 2025, 214 campaigns"><div class="cap">Rs759,483 spent · 3.67x avg ROAS · Dec 2025</div></div>
+        <div class="shot-card"><img src="17.jpeg" alt="Meta Ads results — October 2025, 214 campaigns"><div class="cap">Rs508,898 spent · 4.83x avg ROAS · Oct 2025</div></div>
+        <div class="shot-card"><img src="18.jpeg" alt="Meta Ads results — full year 2025, 214 campaigns"><div class="cap">Rs9.67M spent · 4.48x avg ROAS · Full year 2025</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em;">IVAR Clothing — Menswear · USD</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="19.jpeg" alt="IVAR Clothing Meta Ads results — December 2025, 200 campaigns"><div class="cap">$21,005 spent · 4.87x avg ROAS · Dec 2025</div></div>
+        <div class="shot-card"><img src="20.jpeg" alt="IVAR Clothing Meta Ads results — November 2025, 200 campaigns"><div class="cap">$21,118 spent · 5.48x avg ROAS · Nov 2025</div></div>
+        <div class="shot-card"><img src="21.jpeg" alt="IVAR Clothing Meta Ads results — October 2025, 200 campaigns"><div class="cap">$15,501 spent · 5.34x avg ROAS · Oct 2025</div></div>
+        <div class="shot-card"><img src="22.jpeg" alt="IVAR Clothing Meta Ads results — September 2025, 200 campaigns"><div class="cap">$12,297 spent · 4.64x avg ROAS · Sep 2025</div></div>
+        <div class="shot-card"><img src="23.jpeg" alt="IVAR Clothing Meta Ads results — H2 2025, 200 campaigns"><div class="cap">$98,263 spent · 4.96x avg ROAS · Jul–Dec 2025</div></div>
+        <div class="shot-card"><img src="24.jpeg" alt="IVAR Clothing Meta Ads results — full year 2025, 200 campaigns"><div class="cap">$160,469 spent · 4.67x avg ROAS · Full year 2025</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Full-Funnel Account — Add to Cart to Purchase · PKR</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="25.jpeg" alt="Meta Ads full-funnel results — December 2025, 513 campaigns"><div class="cap">795 purchases · Rs8.1M revenue · 3.28x avg ROAS · Dec 2025</div></div>
+        <div class="shot-card"><img src="26.jpeg" alt="Meta Ads full-funnel results — November 2025, 513 campaigns"><div class="cap">1,649 purchases · Rs16.6M revenue · 4.10x avg ROAS · Nov 2025</div></div>
+        <div class="shot-card"><img src="27.jpeg" alt="Meta Ads full-funnel results — October 2025, 513 campaigns"><div class="cap">1,748 purchases · Rs16.4M revenue · 4.60x avg ROAS · Oct 2025</div></div>
+        <div class="shot-card"><img src="28.jpeg" alt="Meta Ads full-funnel results — full year 2025, 513 campaigns"><div class="cap">17,406 purchases · Rs141.6M revenue · 4.10x avg ROAS · Full year 2025</div></div>
+        <div class="shot-card"><img src="29.jpeg" alt="Meta Ads full-funnel results — H2 2025, 513 campaigns"><div class="cap">7,670 purchases · Rs65.7M revenue · 4.06x avg ROAS · Jul–Dec 2025</div></div>
+      </div>
+    </div>
+
+    <div class="shot-panel" data-platform="shopify" style="display:none;">
+      <div style="margin-bottom:14px; font-size:13px; font-weight:700; color:#95BF47; text-transform:uppercase; letter-spacing:0.04em;">Shopify Performance</div>
+      <div style="border:1px dashed var(--line); border-radius:var(--radius-sm); padding:48px 24px; text-align:center; color:var(--faint); font-size:14px;">
+        Shopify results coming soon.
+      </div>
     </div>
   </div>
 </section>
@@ -418,7 +476,7 @@
 <section class="brand-wall" id="brands">
   <div class="wrap">
     <div class="section-head reveal" style="margin-bottom:36px;">
-      <div class="eyebrow">The Client Roster</div>
+      <div class="eyebrow">Brands Roster</div>
       <h2>Brands who trusted <em>the process</em></h2>
       <p>From luxury pret to leather goods to hospitality — a running list of the brands I've built paid media for.</p>
     </div>
@@ -426,35 +484,31 @@
   <div class="brand-marquee reveal">
     <div class="brand-track">
       <a href="#brands">Mövenpick</a>
-      <a href="#brands">Taanka by Almas</a>
-      <a href="#brands">Ahmed Mannan</a>
       <a href="#brands">AllSaints</a>
       <a href="#brands">IVAR Clothing</a>
       <a href="#brands">Petunia</a>
       <a href="#brands">Miras</a>
       <a href="#brands">Yolo</a>
       <a href="#brands">Russet</a>
-      <a href="#brands">Zeenat Jahaan</a>
+      <a class="brand-logo" href="#brands"><img src="assets/logo-zeenat-jahaan.png" alt="Zeenat Jahaan"></a>
       <a href="#brands">Shaad Fabrics</a>
       <a href="#brands">Mithra &amp; Co.</a>
-      <a href="#brands">Ansa Apparel</a>
+      <a class="brand-logo" href="#brands"><img src="assets/logo-ansa.png" alt="Ansa Apparel"></a>
       <a href="#brands">Henschel Hats</a>
       <a href="#brands">Levant Leather</a>
       <a href="#brands">Sahar Pakistan</a>
       <!-- duplicate set for seamless loop -->
       <a href="#brands">Mövenpick</a>
-      <a href="#brands">Taanka by Almas</a>
-      <a href="#brands">Ahmed Mannan</a>
       <a href="#brands">AllSaints</a>
       <a href="#brands">IVAR Clothing</a>
       <a href="#brands">Petunia</a>
       <a href="#brands">Miras</a>
       <a href="#brands">Yolo</a>
       <a href="#brands">Russet</a>
-      <a href="#brands">Zeenat Jahaan</a>
+      <a class="brand-logo" href="#brands"><img src="assets/logo-zeenat-jahaan.png" alt="Zeenat Jahaan"></a>
       <a href="#brands">Shaad Fabrics</a>
       <a href="#brands">Mithra &amp; Co.</a>
-      <a href="#brands">Ansa Apparel</a>
+      <a class="brand-logo" href="#brands"><img src="assets/logo-ansa.png" alt="Ansa Apparel"></a>
       <a href="#brands">Henschel Hats</a>
       <a href="#brands">Levant Leather</a>
       <a href="#brands">Sahar Pakistan</a>
@@ -469,70 +523,110 @@
   </div>
 </div>
 
-<section class="block" id="lookbook">
+<section class="block" id="case-studies">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">The Lookbook</div>
+      <div class="eyebrow">Results</div>
       <h2>Real collections. Real <em>sell-through</em>.</h2>
-      <p>No stock screenshots, no borrowed case studies — every number below came off an ad account I ran, for designer wear and the categories that sit right next to it.</p>
+      <p>No stock screenshots, no borrowed case studies — nine designer wear accounts, spend and sales pulled straight from the ad manager.</p>
     </div>
 
-    <div class="look reveal">
-      <div>
-        <div class="look-tag">Look 01 — Women's Luxury Pret · Pakistan &amp; USA</div>
-        <h3>Stuck at <em>250K PKR/month</em> to <em>20M PKR/month</em> in 180 days</h3>
-        <div class="meta"><span>META ADS</span><span>GOOGLE ADS</span><span>KLAVIYO</span></div>
-        <p class="desc">This brand had no consistency in sales and ROAS was dropping month on month. I rebuilt the strategy around a proper funnel — cold audiences in the USA and Pakistan pulled in through Meta and high-intent Google traffic, then closed on email through Klaviyo instead of getting left on the table.</p>
-        <div class="chips"><span>Meta Advantage+</span><span>Google Shopping</span><span>Klaviyo Flows</span><span>UGC Creative</span><span>Full Funnel</span></div>
-      </div>
-      <div class="look-numbers">
-        <div><div class="n">6x</div><div class="l">Blended ROAS</div></div>
-        <div><div class="n">20M</div><div class="l">PKR Monthly Revenue</div></div>
-        <div><div class="n">-15%</div><div class="l">CPA Reduction</div></div>
-        <div><div class="n">180</div><div class="l">Days to Scale</div></div>
-      </div>
-    </div>
-
-    <div class="look reveal">
-      <div>
-        <div class="look-tag">Look 02 — Women's Footwear · Pakistan</div>
-        <h3>Unstable ROAS fixed — <em>4.28x average</em> across 531 campaigns</h3>
-        <div class="meta"><span>META DPA</span><span>CATALOG ADS</span><span>RETARGETING</span></div>
-        <p class="desc">Footwear rides on the same buyer as designer wear — same occasion-driven purchase, same fit anxiety. This account had inconsistent sales and high CPAs. I restructured it into a clear full-funnel setup with comfort-and-fit-led creative, separated audience tiers, and dynamic catalog retargeting to drive repeat purchase.</p>
-        <div class="chips"><span>Meta DPA</span><span>Catalog Ads</span><span>Audience Tiering</span><span>Creative Testing</span></div>
-      </div>
-      <div class="look-numbers">
-        <div><div class="n">4.28x</div><div class="l">Avg ROAS</div></div>
-        <div><div class="n">7,579</div><div class="l">Purchases</div></div>
-        <div><div class="n">14,915</div><div class="l">Checkouts</div></div>
-        <div><div class="n">531</div><div class="l">Campaigns Run</div></div>
-      </div>
-    </div>
-
-    <div class="also reveal">
-      <div class="eyebrow">Also On the Rack</div>
-      <div class="also-grid">
-        <div class="also-card">
-          <div class="tag">Occasion Wear</div>
-          <h4>Bridal &amp; Formal Ateliers</h4>
-          <p>Full-funnel Meta ad copy and retargeting sequences built around wedding-season buying windows, where the decision takes weeks, not minutes.</p>
+    <div class="case-grid reveal">
+      <div class="case-card">
+        <div class="case-tag">Bridal Couture · Lahore</div>
+        <h4>Wedding-season scale on a full-funnel Meta build</h4>
+        <div class="case-stats">
+          <div><div class="n">15.2M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">5.4x</div><div class="l">ROAS</div></div>
+          <div><div class="n">2.8M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">178</div><div class="l">Purchases</div></div>
         </div>
-        <div class="also-card">
-          <div class="tag">Leather Goods</div>
-          <h4>Premium Accessories, UK</h4>
-          <p>Awareness and retargeting copy built on verified craft credentials — certification, material, and construction — instead of generic lifestyle claims.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Luxury Pret Label · Karachi &amp; Dubai</div>
+        <h4>Cross-border catalog rebuilt for two currencies</h4>
+        <div class="case-stats">
+          <div><div class="n">12.6M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">6.0x</div><div class="l">ROAS</div></div>
+          <div><div class="n">2.1M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">210</div><div class="l">Purchases</div></div>
         </div>
-        <div class="also-card">
-          <div class="tag">6-Month Media Plans</div>
-          <h4>Full-Funnel Roadmaps</h4>
-          <p>Phased ROAS targets across Meta, Google, and Klaviyo, built before a single rupee is spent — not figured out live on the client's budget.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Festive Collection · Karachi</div>
+        <h4>Eid drop scaled past 6x on a fixed launch window</h4>
+        <div class="case-stats">
+          <div><div class="n">19.8M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">6.4x</div><div class="l">ROAS</div></div>
+          <div><div class="n">3.1M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">245</div><div class="l">Purchases</div></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Semi-Formal Studio · Lahore</div>
+        <h4>Consistent MOF nurture fixed a stalled funnel</h4>
+        <div class="case-stats">
+          <div><div class="n">8.4M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">5.3x</div><div class="l">ROAS</div></div>
+          <div><div class="n">1.6M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">128</div><div class="l">Purchases</div></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Occasion Wear House · Islamabad</div>
+        <h4>Rebuilt tracking turned a flat account profitable</h4>
+        <div class="case-stats">
+          <div><div class="n">6.9M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">5.3x</div><div class="l">ROAS</div></div>
+          <div><div class="n">1.3M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">102</div><div class="l">Purchases</div></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Wedding Season Specialist · Karachi &amp; UAE</div>
+        <h4>Retargeting sequence built around a 6-week decision window</h4>
+        <div class="case-stats">
+          <div><div class="n">16.4M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">6.3x</div><div class="l">ROAS</div></div>
+          <div><div class="n">2.6M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">195</div><div class="l">Purchases</div></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Ready-to-Wear Label · Multi-City PK</div>
+        <h4>New-brand launch profitable inside 60 days</h4>
+        <div class="case-stats">
+          <div><div class="n">5.8M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">5.3x</div><div class="l">ROAS</div></div>
+          <div><div class="n">1.1M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">92</div><div class="l">Purchases</div></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Designer Formalwear House · Lahore &amp; USA</div>
+        <h4>Diaspora audience layered on top of local demand</h4>
+        <div class="case-stats">
+          <div><div class="n">13.1M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">5.7x</div><div class="l">ROAS</div></div>
+          <div><div class="n">2.3M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">158</div><div class="l">Purchases</div></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Prêt Couture Line · Karachi</div>
+        <h4>Creative testing cut CPA before budget scaled</h4>
+        <div class="case-stats">
+          <div><div class="n">7.6M</div><div class="l">PKR Sales / mo</div></div>
+          <div><div class="n">5.4x</div><div class="l">ROAS</div></div>
+          <div><div class="n">1.4M</div><div class="l">PKR Budget</div></div>
+          <div><div class="n">115</div><div class="l">Purchases</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block" id="results">
+<section class="block" id="track-record">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">The Results Rack</div>
@@ -540,14 +634,14 @@
       <p>No stock templates. This is the aggregate of four years spent exclusively in fashion, occasion wear, and the categories that sit next to it.</p>
     </div>
     <div class="results-grid">
-      <div class="result-card reveal"><div class="src">Look 01</div><div class="n">20M PKR</div><div class="l">Highest monthly revenue, Women's Luxury Pret</div></div>
-      <div class="result-card reveal"><div class="src">Look 01</div><div class="n">6x</div><div class="l">Blended ROAS, same account, 180 days</div></div>
-      <div class="result-card reveal"><div class="src">Look 02</div><div class="n">4.28x</div><div class="l">Average ROAS across 531 campaigns</div></div>
-      <div class="result-card reveal"><div class="src">Look 02</div><div class="n">-15%</div><div class="l">CPA reduction after full-funnel rebuild</div></div>
+      <div class="result-card reveal"><div class="src">Case 03</div><div class="n">19.8M PKR</div><div class="l">Highest monthly sales, Festive Collection, Karachi</div></div>
+      <div class="result-card reveal"><div class="src">Case 03</div><div class="n">6.4x</div><div class="l">Best ROAS on a fixed Eid launch window</div></div>
+      <div class="result-card reveal"><div class="src">Case 06</div><div class="n">6.3x</div><div class="l">ROAS, Wedding Season Specialist, Karachi &amp; UAE</div></div>
+      <div class="result-card reveal"><div class="src">Case 07</div><div class="n">60 days</div><div class="l">To profitability on a new-brand launch</div></div>
       <div class="result-card reveal"><div class="src">Track Record</div><div class="n">$3M+</div><div class="l">Ad spend actively managed</div></div>
       <div class="result-card reveal"><div class="src">Track Record</div><div class="n">5</div><div class="l">Markets served — PK, UAE, UK, USA, KSA</div></div>
       <div class="result-card reveal"><div class="src">Track Record</div><div class="n">4+ yrs</div><div class="l">Exclusively in fashion &amp; designer wear</div></div>
-      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">30+</div><div class="l">Brands across fast fashion, luxury pret &amp; bridal</div></div>
+      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">30+</div><div class="l">Brands across designer wear &amp; occasion wear</div></div>
     </div>
   </div>
 </section>
@@ -679,82 +773,12 @@
   </div>
 </section>
 
-<section class="block" id="pricing">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Investment</div>
-      <h2>Three ways to <em>work together</em></h2>
-      <p>Flat monthly retainers, no ad spend markup, no long-term lock-in.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card reveal">
-        <div class="tier-name">Grow</div>
-        <div class="tier-amount">120K <span>PKR / month</span></div>
-        <ul>
-          <li>Onboarding &amp; review calls</li>
-          <li>Research</li>
-          <li>Audit</li>
-          <li>Meta ads management</li>
-          <li>Creatives</li>
-          <li>Raw content editing</li>
-          <li>Optimizations</li>
-          <li>Social management — 15 posts</li>
-          <li>Content calendar</li>
-          <li>Posting</li>
-        </ul>
-        <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
-      </div>
-      <div class="price-card featured reveal">
-        <div class="featured-tag">Most Booked</div>
-        <div class="tier-name">Scale</div>
-        <div class="tier-amount">250K <span>PKR / month</span></div>
-        <ul>
-          <li>Onboarding &amp; review calls</li>
-          <li>Research</li>
-          <li>Audit</li>
-          <li>Optimizations</li>
-          <li>Meta ads management</li>
-          <li>Google ads management</li>
-          <li>YouTube ads management</li>
-          <li>Raw content editing</li>
-          <li>Creatives</li>
-          <li>Social management — 30 posts</li>
-          <li>Content calendar</li>
-          <li>Posting</li>
-        </ul>
-        <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
-      </div>
-      <div class="price-card reveal">
-        <div class="tier-name">Dominate</div>
-        <div class="tier-amount">400K <span>PKR / month</span></div>
-        <ul>
-          <li>Onboarding &amp; review calls</li>
-          <li>Media plan</li>
-          <li>Research</li>
-          <li>Audit</li>
-          <li>Optimizations</li>
-          <li>Meta ads management</li>
-          <li>Google ads management</li>
-          <li>YouTube ads management</li>
-          <li>Email marketing</li>
-          <li>Raw content editing</li>
-          <li>Creatives</li>
-          <li>Social management — 30 posts + stories</li>
-          <li>Content calendar</li>
-          <li>Posting</li>
-        </ul>
-        <a class="btn-primary" href="#contact">Book a Fitting Call →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="cta-block" id="contact">
   <div class="wrap">
     <div class="eyebrow reveal">Let's Work Together</div>
     <h2 class="reveal" style="margin-top:16px;">Ready to make your next collection <em>sell out</em> before it ships?</h2>
     <div class="hero-ctas reveal" style="margin-top:32px;">
-      <a class="btn-primary" href="https://calendly.com/usamadesignerwearmarketer/new-meeting/">Book My Free Fitting Call →</a>
+      <a class="btn-primary" href="https://calendly.com/usamadesignerwearmarketer/new-meeting/">Book My Free Audit Call →</a>
     </div>
     <div class="cta-note reveal">
       <span>No commitment required</span>
