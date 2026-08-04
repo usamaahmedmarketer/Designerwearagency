@@ -221,6 +221,9 @@
   .brand-track a.brand-logo{ display:flex; align-items:center; height:34px; }
   .brand-track a.brand-logo img{ height:100%; width:auto; max-width:140px; object-fit:contain; filter:grayscale(1); opacity:0.75; transition:opacity 0.2s, filter 0.2s; }
   .brand-track a.brand-logo:hover img{ filter:grayscale(0); opacity:1; }
+  .brand-track a.brand-logo.chip{ height:40px; padding:5px 12px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+  .brand-track a.brand-logo.chip img{ height:100%; max-width:120px; filter:none; opacity:0.9; }
+  .brand-track a.brand-logo.chip:hover img{ filter:none; opacity:1; }
   @keyframes brandScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
   @media (prefers-reduced-motion: reduce){ .brand-track{animation:none;} }
   .results-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
@@ -401,18 +404,27 @@
 
     <div class="shot-panel" data-platform="google">
       <div style="margin-bottom:14px; font-size:13px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em;">Google Ads Performance</div>
+
+      <div style="margin-bottom:14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Account 1 · PKR</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="Google 1.jpeg" alt="Google Ads results — June 2024"><div class="cap">Rs80.1K cost · Rs310K conv. value · 387.56% ROAS · Jun 2024</div></div>
+        <div class="shot-card"><img src="Google 3.jpeg" alt="Google Ads results — July 2024"><div class="cap">Rs199K cost · Rs766K conv. value · 385.45% ROAS · Jul 2024</div></div>
+        <div class="shot-card"><img src="Google 2.jpeg" alt="Google Ads results — August 2024"><div class="cap">Rs366K cost · Rs1.64M conv. value · 447.58% ROAS · Aug 2024</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Account 2 · PKR</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="Google 6.jpeg" alt="Google Ads results — June 2024, account 2"><div class="cap">Rs70.2K cost · Rs843K conv. value · 1,200.51% ROAS · Jun 2024</div></div>
+        <div class="shot-card"><img src="Google 4.jpeg" alt="Google Ads results — July 2024, account 2"><div class="cap">Rs135K cost · Rs1.02M conv. value · 756.92% ROAS · Jul 2024</div></div>
+        <div class="shot-card"><img src="Google 5.jpeg" alt="Google Ads results — August 2024, account 2"><div class="cap">Rs231K cost · Rs2.04M conv. value · 882.96% ROAS · Aug 2024</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Account 3 · USD</div>
       <div class="shot-grid reveal">
         <div class="shot-card"><img src="5.png" alt="Google Ads results — conversion value and cost"><div class="cap">$18.9M conv. value · 11K conversions · Nov 2025</div></div>
         <div class="shot-card"><img src="6.png" alt="Google Ads results — cost per conversion"><div class="cap">$28.37 cost/conv · 1.2K conversions</div></div>
         <div class="shot-card"><img src="7.png" alt="Google Ads results — ROAS"><div class="cap">6,681% actual ROAS · 2.58K conversions · Oct 2025</div></div>
         <div class="shot-card"><img src="8.png" alt="Google Ads results — ROAS December"><div class="cap">2,154% actual ROAS · Dec 2025</div></div>
-     <div class="shot-card"><img src="Google 1.jpeg" alt="Google Ads results — conversion value and cost"><div class="cap">$18.9M conv. value · 11K conversions · Nov 2025</div></div>
-        <div class="shot-card"><img src="Google 2.jpeg" alt="Google Ads results — cost per conversion"><div class="cap">$28.37 cost/conv · 1.2K conversions</div></div>
-        <div class="shot-card"><img src="Google 3.jpeg" alt="Google Ads results — ROAS"><div class="cap">6,681% actual ROAS · 2.58K conversions · Oct 2025</div></div>
-        <div class="shot-card"><img src="Google 4.jpeg" alt="Google Ads results — ROAS December"><div class="cap">2,154% actual ROAS · Dec 2025</div></div>
-<div class="shot-card"><img src="Google 5.jpeg" alt="Google Ads results — ROAS"><div class="cap">6,681% actual ROAS · 2.58K conversions · Oct 2025</div></div>
-        <div class="shot-card"><img src="Google 6.jpeg" alt="Google Ads results — ROAS December"><div class="cap">2,154% actual ROAS · Dec 2025</div></div>
-
       </div>
     </div>
 
@@ -434,7 +446,7 @@
         <div class="shot-card"><img src="13.jpeg" alt="Meta Ads results — full year 2025, 32 campaigns"><div class="cap">Rs12.23M spent · 7,106 purchases · 5.40x avg ROAS · Full year 2025</div></div>
       </div>
 
-      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Modest Wear Account — Hijabs &amp; Essentials · PKR</div>
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">High-Volume Account · PKR</div>
       <div class="shot-grid reveal">
         <div class="shot-card"><img src="14.jpeg" alt="Meta Ads results — November 2025, 214 campaigns"><div class="cap">Rs591,706 spent · 4.09x avg ROAS · Nov 2025</div></div>
         <div class="shot-card"><img src="15.jpeg" alt="Meta Ads results — December 2025, 214 campaigns"><div class="cap">Rs759,483 spent · 3.67x avg ROAS · Dec 2025</div></div>
@@ -442,14 +454,14 @@
         <div class="shot-card"><img src="18.jpeg" alt="Meta Ads results — full year 2025, 214 campaigns"><div class="cap">Rs9.67M spent · 4.48x avg ROAS · Full year 2025</div></div>
       </div>
 
-      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em;">IVAR Clothing — Menswear · USD</div>
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.04em;">International Account · USD</div>
       <div class="shot-grid reveal">
-        <div class="shot-card"><img src="19.jpeg" alt="IVAR Clothing Meta Ads results — December 2025, 200 campaigns"><div class="cap">$21,005 spent · 4.87x avg ROAS · Dec 2025</div></div>
-        <div class="shot-card"><img src="20.jpeg" alt="IVAR Clothing Meta Ads results — November 2025, 200 campaigns"><div class="cap">$21,118 spent · 5.48x avg ROAS · Nov 2025</div></div>
-        <div class="shot-card"><img src="21.jpeg" alt="IVAR Clothing Meta Ads results — October 2025, 200 campaigns"><div class="cap">$15,501 spent · 5.34x avg ROAS · Oct 2025</div></div>
-        <div class="shot-card"><img src="22.jpeg" alt="IVAR Clothing Meta Ads results — September 2025, 200 campaigns"><div class="cap">$12,297 spent · 4.64x avg ROAS · Sep 2025</div></div>
-        <div class="shot-card"><img src="23.jpeg" alt="IVAR Clothing Meta Ads results — H2 2025, 200 campaigns"><div class="cap">$98,263 spent · 4.96x avg ROAS · Jul–Dec 2025</div></div>
-        <div class="shot-card"><img src="24.jpeg" alt="IVAR Clothing Meta Ads results — full year 2025, 200 campaigns"><div class="cap">$160,469 spent · 4.67x avg ROAS · Full year 2025</div></div>
+        <div class="shot-card"><img src="19.jpeg" alt="Meta Ads results — December 2025, 200 campaigns"><div class="cap">$21,005 spent · 4.87x avg ROAS · Dec 2025</div></div>
+        <div class="shot-card"><img src="20.jpeg" alt="Meta Ads results — November 2025, 200 campaigns"><div class="cap">$21,118 spent · 5.48x avg ROAS · Nov 2025</div></div>
+        <div class="shot-card"><img src="21.jpeg" alt="Meta Ads results — October 2025, 200 campaigns"><div class="cap">$15,501 spent · 5.34x avg ROAS · Oct 2025</div></div>
+        <div class="shot-card"><img src="22.jpeg" alt="Meta Ads results — September 2025, 200 campaigns"><div class="cap">$12,297 spent · 4.64x avg ROAS · Sep 2025</div></div>
+        <div class="shot-card"><img src="23.jpeg" alt="Meta Ads results — H2 2025, 200 campaigns"><div class="cap">$98,263 spent · 4.96x avg ROAS · Jul–Dec 2025</div></div>
+        <div class="shot-card"><img src="24.jpeg" alt="Meta Ads results — full year 2025, 200 campaigns"><div class="cap">$160,469 spent · 4.67x avg ROAS · Full year 2025</div></div>
       </div>
 
       <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Full-Funnel Account — Add to Cart to Purchase · PKR</div>
@@ -464,8 +476,28 @@
 
     <div class="shot-panel" data-platform="shopify" style="display:none;">
       <div style="margin-bottom:14px; font-size:13px; font-weight:700; color:#95BF47; text-transform:uppercase; letter-spacing:0.04em;">Shopify Performance</div>
-      <div style="border:1px dashed var(--line); border-radius:var(--radius-sm); padding:48px 24px; text-align:center; color:var(--faint); font-size:14px;">
-        Shopify results coming soon.
+
+      <div style="margin-bottom:14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">High-Volume Store · PKR 17M–22M / mo</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="Shopify 1.jpeg" alt="Shopify sales dashboard — April"><div class="cap">PKR 16.7M sales · 3,638 orders · 1.84% CVR · April</div></div>
+        <div class="shot-card"><img src="Shopify 2.jpeg" alt="Shopify sales dashboard — May"><div class="cap">PKR 17.4M sales · 4,320 orders · 2.04% CVR · May</div></div>
+        <div class="shot-card"><img src="Shopify 3.jpeg" alt="Shopify sales dashboard — June"><div class="cap">PKR 21.7M sales · 4,979 orders · 1.58% CVR · June</div></div>
+        <div class="shot-card"><img src="Shopify 4.jpeg" alt="Shopify sales dashboard — July"><div class="cap">PKR 20.5M sales · 4,768 orders · 1.62% CVR · July</div></div>
+        <div class="shot-card"><img src="Shopify 5.jpeg" alt="Shopify sales dashboard — August"><div class="cap">PKR 22.2M sales · 5,080 orders · 1.63% CVR · August</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Early-Stage Growth Store · PKR 1.7M–3.3M / mo</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="Shopify 7.jpeg" alt="Shopify sales dashboard — January growth"><div class="cap">PKR 1.78M sales · 536 orders · +335% sales YoY · January</div></div>
+        <div class="shot-card"><img src="Shopify 8.jpeg" alt="Shopify sales dashboard — February"><div class="cap">PKR 1.84M sales · 560 orders · 3.62% CVR · February</div></div>
+        <div class="shot-card"><img src="Shopify 9.jpeg" alt="Shopify sales dashboard — March"><div class="cap">PKR 2.98M sales · 901 orders · +49% sales · March</div></div>
+        <div class="shot-card"><img src="Shopify 10.jpeg" alt="Shopify sales dashboard — April growth store"><div class="cap">PKR 3.27M sales · 954 orders · 4.34% CVR · April</div></div>
+      </div>
+
+      <div style="margin:36px 0 14px; font-size:12px; font-weight:700; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em;">Scaling Store · PKR 7M–8M / mo</div>
+      <div class="shot-grid reveal">
+        <div class="shot-card"><img src="Shopify 11.jpeg" alt="Shopify sales dashboard — August, scaling store"><div class="cap">PKR 7.86M sales · 3,198 orders · 3.28% CVR · August</div></div>
+        <div class="shot-card"><img src="Shopify 12.jpeg" alt="Shopify sales dashboard — August, high growth"><div class="cap">PKR 7.43M sales · 2,983 orders · +95% sales YoY · August</div></div>
       </div>
     </div>
   </div>
@@ -490,35 +522,39 @@
   </div>
   <div class="brand-marquee reveal">
     <div class="brand-track">
-      <a href="#brands">Mövenpick</a>
-      <a href="#brands">AllSaints</a>
-      <a href="#brands">IVAR Clothing</a>
-      <a href="#brands">Petunia</a>
-      <a href="#brands">Miras</a>
-      <a href="#brands">Yolo</a>
-      <a href="#brands">Russet</a>
-      <a class="brand-logo" href="#brands"><img src="assets/logo-zeenat-jahaan.png" alt="Zeenat Jahaan"></a>
-      <a href="#brands">Shaad Fabrics</a>
-      <a href="#brands">Mithra &amp; Co.</a>
-      <a class="brand-logo" href="#brands"><img src="assets/logo-ansa.png" alt="Ansa Apparel"></a>
-      <a href="#brands">Henschel Hats</a>
+      <a class="brand-logo" href="#brands"><img src="assets/Move n Pick.jpg" alt="Mövenpick"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/All Saints.jpg" alt="AllSaints"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Ivar.png" alt="IVAR Clothing"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Petunia.jpg" alt="Petunia"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Miras.jpg" alt="Miras"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Yolo.jpg" alt="Yolo"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Russet Logo.jpg" alt="Russet"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Zeenat Jahan .png" alt="Zeenat Jahaan"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Shaad Fabrics.jpg" alt="Shaad Fabrics"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Mithra & co.jpg" alt="Mithra &amp; Co."></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Ansa Appreal .png" alt="Ansa Apparel"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Henchel Hats.jpg" alt="Henschel Hats"></a>
       <a href="#brands">Levant Leather</a>
-      <a href="#brands">Sahar Pakistan</a>
+      <a class="brand-logo" href="#brands"><img src="assets/Sahar Pakistan.jpg" alt="Sahar Pakistan"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Ahmed manan.jpg" alt="Ahmed Manan Design Studio"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Taanka by Almas.jpg" alt="Taanka by Almas"></a>
       <!-- duplicate set for seamless loop -->
-      <a href="#brands">Mövenpick</a>
-      <a href="#brands">AllSaints</a>
-      <a href="#brands">IVAR Clothing</a>
-      <a href="#brands">Petunia</a>
-      <a href="#brands">Miras</a>
-      <a href="#brands">Yolo</a>
-      <a href="#brands">Russet</a>
-      <a class="brand-logo" href="#brands"><img src="assets/logo-zeenat-jahaan.png" alt="Zeenat Jahaan"></a>
-      <a href="#brands">Shaad Fabrics</a>
-      <a href="#brands">Mithra &amp; Co.</a>
-      <a class="brand-logo" href="#brands"><img src="assets/logo-ansa.png" alt="Ansa Apparel"></a>
-      <a href="#brands">Henschel Hats</a>
+      <a class="brand-logo" href="#brands"><img src="assets/Move n Pick.jpg" alt="Mövenpick"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/All Saints.jpg" alt="AllSaints"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Ivar.png" alt="IVAR Clothing"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Petunia.jpg" alt="Petunia"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Miras.jpg" alt="Miras"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Yolo.jpg" alt="Yolo"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Russet Logo.jpg" alt="Russet"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Zeenat Jahan .png" alt="Zeenat Jahaan"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Shaad Fabrics.jpg" alt="Shaad Fabrics"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Mithra & co.jpg" alt="Mithra &amp; Co."></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Ansa Appreal .png" alt="Ansa Apparel"></a>
+      <a class="brand-logo" href="#brands"><img src="assets/Henchel Hats.jpg" alt="Henschel Hats"></a>
       <a href="#brands">Levant Leather</a>
-      <a href="#brands">Sahar Pakistan</a>
+      <a class="brand-logo" href="#brands"><img src="assets/Sahar Pakistan.jpg" alt="Sahar Pakistan"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Ahmed manan.jpg" alt="Ahmed Manan Design Studio"></a>
+      <a class="brand-logo chip" href="#brands"><img src="assets/Taanka by Almas.jpg" alt="Taanka by Almas"></a>
     </div>
   </div>
 </section>
@@ -629,26 +665,6 @@
           <div><div class="n">115</div><div class="l">Purchases</div></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="track-record">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">The Results Rack</div>
-      <h2>Every number, off a <em>live account</em></h2>
-      <p>No stock templates. This is the aggregate of four years spent exclusively in fashion, occasion wear, and the categories that sit next to it.</p>
-    </div>
-    <div class="results-grid">
-      <div class="result-card reveal"><div class="src">Case 03</div><div class="n">19.8M PKR</div><div class="l">Highest monthly sales, Festive Collection, Karachi</div></div>
-      <div class="result-card reveal"><div class="src">Case 03</div><div class="n">6.4x</div><div class="l">Best ROAS on a fixed Eid launch window</div></div>
-      <div class="result-card reveal"><div class="src">Case 06</div><div class="n">6.3x</div><div class="l">ROAS, Wedding Season Specialist, Karachi &amp; UAE</div></div>
-      <div class="result-card reveal"><div class="src">Case 07</div><div class="n">60 days</div><div class="l">To profitability on a new-brand launch</div></div>
-      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">$3M+</div><div class="l">Ad spend actively managed</div></div>
-      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">5</div><div class="l">Markets served — PK, UAE, UK, USA, KSA</div></div>
-      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">4+ yrs</div><div class="l">Exclusively in fashion &amp; designer wear</div></div>
-      <div class="result-card reveal"><div class="src">Track Record</div><div class="n">30+</div><div class="l">Brands across designer wear &amp; occasion wear</div></div>
     </div>
   </div>
 </section>
